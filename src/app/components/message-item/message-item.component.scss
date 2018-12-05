@@ -1,0 +1,36 @@
+.chatitem {
+  border: 0 !important;
+}
+
+.message {
+  font-size: 1em;
+  font-style: italic;
+  padding: 5px 15px !important;
+  border-radius: 25px;
+  border-bottom-left-radius: 0;
+  color: #fff;
+  /*height: auto;
+  word-wrap: break-word;
+  clear: both;
+  overflow: hidden;
+  height: 1%;*/
+}
+
+.timeform {
+  float: left;
+  width: 100%;
+
+  i {
+    margin-top: 8px;
+    margin-left: 18px;
+  }
+
+  .timestamp{
+    font-size: 0.6em;
+  }
+}
+
+.avatar{
+  width: 50px;
+  margin-right: 20px;
+}

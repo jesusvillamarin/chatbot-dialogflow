@@ -1,0 +1,9 @@
+<li class="list-group-item chatitem">
+  <img [src]="message.avatar" class="avatar"/>
+  <div class="message" [ngStyle]="{'background': message.background}">
+    {{message.content}}
+  </div>
+  <div class="timeform">
+    <i class="fa fa-clock-o" aria-hidden="true"></i> <span class="timestamp"> {{ message.timestamp | amLocale: 'es' | amTimeAgo }}</span>
+  </div>
+</li>
