@@ -9,8 +9,7 @@ import { MessageItemComponent } from '../../components/message-item/message-item
 })
 export class MessageListComponent implements OnInit, AfterViewInit {
 
-  @Input('messages')
-  private messages: Message[];
+  @Input('messages') private messages: Message[];
 
   @ViewChild('chatlist', { read: ElementRef }) chatList: ElementRef;
   @ViewChildren(MessageItemComponent, { read: ElementRef }) chatItems: QueryList<MessageItemComponent>;
@@ -26,8 +25,7 @@ export class MessageListComponent implements OnInit, AfterViewInit {
   private scrollToBottom(): void {
     try {
       this.chatList.nativeElement.scrollTop = this.chatList.nativeElement.scrollHeight;
-    }
-    catch (err) {
+    } catch (err) {
       console.log('Could not find the "chatList" element.');
     }
   }

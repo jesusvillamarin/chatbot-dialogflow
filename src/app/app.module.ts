@@ -1,28 +1,38 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MomentModule } from 'ngx-moment';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { MatDialogModule } from '@angular/material/dialog';
+
 import { AppComponent } from './app.component';
 import { DialogflowService } from './services';
-import { MessageListComponent, MessageFormComponent, MessageItemComponent } from './components'
+import { MessageListComponent, MessageFormComponent, MessageItemComponent } from './components';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ChatComponent } from './components/chat/chat.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MessageListComponent,
     MessageFormComponent,
-    MessageItemComponent
+    MessageItemComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    MomentModule
+    MomentModule,
+    BrowserAnimationsModule,
+    DragDropModule,
+    MatDialogModule
   ],
   providers: [
     DialogflowService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ChatComponent]
 })
 export class AppModule { }
