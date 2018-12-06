@@ -12,7 +12,8 @@ export class MessageItemComponent implements OnInit {
 
   @Output() scrollDown = new EventEmitter<void>();
 
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit() {
       this.scrollDown.emit();

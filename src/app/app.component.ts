@@ -1,3 +1,4 @@
+import { Message } from './models/message';
 import { ChatComponent } from './components/chat/chat.component';
 import { Component } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
@@ -16,7 +17,7 @@ export class AppComponent {
     const dialogRef = this.dialog.open(ChatComponent, {
     });
 
-    dialogRef.afterClosed().subscribe( res => {
+    dialogRef.afterClosed().subscribe(res => {
     });
 
   }

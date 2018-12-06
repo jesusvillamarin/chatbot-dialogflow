@@ -22,15 +22,16 @@ export class MessageListComponent implements OnInit, AfterViewInit {
     });
   }
 
+  ngOnInit() {
+    this.scrollToBottom();
+  }
+
   private scrollToBottom(): void {
     try {
       this.chatList.nativeElement.scrollTop = this.chatList.nativeElement.scrollHeight;
     } catch (err) {
       console.log('Could not find the "chatList" element.');
     }
-  }
-
-  ngOnInit() {
   }
 
 }
