@@ -1,5 +1,7 @@
+import { ChatComponent } from './components/chat/chat.component';
 import { Component } from '@angular/core';
-import { Message } from './models';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+
 
 @Component({
   selector: 'app-root',
@@ -7,14 +9,16 @@ import { Message } from './models';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public message : Message;
-  public messages : Message[];
 
+  constructor(public dialog: MatDialog) { }
 
-  constructor(){
-    this.message = new Message('', 'assets/images/user.png');
-    this.messages = [
-      new Message('Hola!, soy Luzio, ¿Necesitas ayuda?', 'assets/images/bot.png', new Date(), "#5cb85c")
-    ];
+  openBot() {
+    const dialogRef = this.dialog.open(ChatComponent);
+
+    dialogRef.afterClosed().subscribe( res => {
+      console.log(res);
+    });
+
   }
+
 }

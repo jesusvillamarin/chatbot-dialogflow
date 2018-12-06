@@ -1,14 +1,14 @@
-.chatform{
-  width: 600px;
-  margin: 0 auto;
-  margin-top: 50px;
-  background-color: #fff;
-  border-radius: 4px;
-  box-shadow: -2px 2px 5px #999;
-  -webkit-box-shadow: -2px 2px 5px #999;
-  -moz-box-shadow: -2px 2px 5px #999;
-}
+.pop-up{
+  position: absolute;
+  top: 80%;
+  right: 3%;
+  width: 70px;
+  height: 70px;
 
-.header{
-  font-weight: bold;
+  border: 2px solid hsl(199, 67%, 42%);
+  border-radius: 100%;
+  box-shadow: 0 4px 43px 10px rgba(158,199,250,0.90);
+
+  transition: all 0s ease;
+  background-image: url('../assets/images/luz.png');
 }
