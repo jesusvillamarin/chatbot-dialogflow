@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Message } from '../../models';
 import { DialogflowService } from '../../services';
+import { StoreService } from '../../services/store.service';
 
 @Component({
   selector: 'message-form',
@@ -10,12 +11,12 @@ import { DialogflowService } from '../../services';
 export class MessageFormComponent implements OnInit {
 
   @Input('message')
-  private message : Message;
+  private message: Message;
 
   @Input('messages')
-  private messages : Message[];
+  private messages: Message[];
 
-  constructor(private dialogFlowService: DialogflowService) { }
+  constructor(private dialogFlowService: DialogflowService, private messageService: StoreService) { }
 
   ngOnInit() {
   }
@@ -31,6 +32,7 @@ export class MessageFormComponent implements OnInit {
       this.messages.push(
         new Message(res.result.fulfillment.speech, 'assets/images/bot.png', res.timestamp, 'message my-message', 'Luzio', 'message-data')
       );
+      this.messageService.concatMessages(this.messages);
     });
 
     this.message = new Message('', 'assets/images/user.png');

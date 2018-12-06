@@ -7,12 +7,14 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { DialogflowService } from './services';
 import { MessageListComponent, MessageFormComponent, MessageItemComponent } from './components';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ChatComponent } from './components/chat/chat.component';
+
+import { DialogflowService } from './services';
+import { StoreService } from './services/store.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { ChatComponent } from './components/chat/chat.component';
     MatButtonModule
   ],
   providers: [
-    DialogflowService
+    DialogflowService,
+    StoreService
   ],
   bootstrap: [AppComponent],
   entryComponents: [ChatComponent]
