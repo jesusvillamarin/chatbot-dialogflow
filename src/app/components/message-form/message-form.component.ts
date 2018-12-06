@@ -22,13 +22,14 @@ export class MessageFormComponent implements OnInit {
 
   public sendMessage(): void {
     this.message.timestamp = new Date();
-    this.message.background = "#0275d8";
+    this.message.classStyle = 'message other-message';
+    this.message.avatarClass = 'message-data align-right';
+    this.message.name = 'Aspirante';
     this.messages.push(this.message);
 
     this.dialogFlowService.getResponse(this.message.content).subscribe(res => {
-      console.log(res);
       this.messages.push(
-        new Message(res.result.fulfillment.speech, 'assets/images/bot.png', res.timestamp, "#5cb85c")
+        new Message(res.result.fulfillment.speech, 'assets/images/bot.png', res.timestamp, 'message my-message', 'Luzio', 'message-data')
       );
     });
 

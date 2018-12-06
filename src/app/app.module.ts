@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 import { MomentModule } from 'ngx-moment';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 import { AppComponent } from './app.component';
 import { DialogflowService } from './services';
@@ -27,7 +29,9 @@ import { ChatComponent } from './components/chat/chat.component';
     MomentModule,
     BrowserAnimationsModule,
     DragDropModule,
-    MatDialogModule
+    MatDialogModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [
     DialogflowService
@@ -36,3 +40,5 @@ import { ChatComponent } from './components/chat/chat.component';
   entryComponents: [ChatComponent]
 })
 export class AppModule { }
+
+

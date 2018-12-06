@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { Message } from '../../models';
 
 @Component({
@@ -8,12 +8,14 @@ import { Message } from '../../models';
 })
 export class MessageItemComponent implements OnInit {
 
-  @Input('message')
-  private message: Message;
+  @Input('message')  private message: Message;
+
+  @Output() scrollDown = new EventEmitter<void>();
 
   constructor() { }
 
   ngOnInit() {
+      this.scrollDown.emit();
   }
 
 }
