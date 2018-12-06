@@ -1,9 +1,7 @@
 <div class="chat">
-  <div class="chat-history">
-    <div #chatlist>
-      <ul class="list-group">
-        <message-item *ngFor="let msg of messages" [message]="msg"></message-item>
-      </ul>
-    </div>
+  <div class="chat-history" #chatlist>
+    <ul class="list-group">
+      <message-item *ngFor="let msg of messages" [message]="msg" (scrollDown)="scrollToBottom()"></message-item>
+    </ul>
   </div>
 </div>

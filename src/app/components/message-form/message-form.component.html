@@ -1,4 +1,4 @@
-<div class="chatcontrol">
-  <input type="text" class="form-control chatinput" maxlength="200" placeholder="Escribe tu duda..." (keyup.enter)="sendMessage()" [(ngModel)]="message.content"/>
-  <button class="btn btn-success sendbtn" (click)="sendMessage()">Enviar</button>
-</div>
+<div class="chat-message clearfix">
+      <textarea name="message-to-send" id="message-to-send" placeholder ="Escriba tu duda..." (keyup.enter)="sendMessage()" [(ngModel)]="message.content" rows="3"></textarea>
+      <button (click)="sendMessage()">Enviar</button>
+</div> <!-- end chat-message -->

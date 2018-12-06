@@ -13,10 +13,10 @@ export class AppComponent {
   constructor(public dialog: MatDialog) { }
 
   openBot() {
-    const dialogRef = this.dialog.open(ChatComponent);
+    const dialogRef = this.dialog.open(ChatComponent, {
+    });
 
     dialogRef.afterClosed().subscribe( res => {
-      console.log(res);
     });
 
   }

@@ -18,7 +18,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .chat {
-  width: 490px;
+  width: 350px;
   float: left;
   background: #F2F5F8;
   border-top-right-radius: 5px;
@@ -54,7 +54,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   padding: 30px 30px 20px;
   border-bottom: 2px solid white;
   overflow-y: scroll;
-  height: 575px;
+  height: 250px;
+  width: 350px;
 }
 .chat .chat-history .message-data {
   margin-bottom: 15px;
