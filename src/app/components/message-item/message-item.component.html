@@ -1,9 +1,13 @@
-<li class="list-group-item chatitem">
-  <img [src]="message.avatar" class="avatar"/>
-  <div class="message" [ngStyle]="{'background': message.background}">
-    {{message.content}}
+<li class="clearfix">
+  <div [class]="message.avatarClass">
+    <span class="message-data-name"><i class="fa fa-circle online"></i>
+    <img [src]="message.avatar" class="avatar"/>{{message.name}}</span>
   </div>
-  <div class="timeform">
-    <i class="fa fa-clock-o" aria-hidden="true"></i> <span class="timestamp"> {{ message.timestamp | amLocale: 'es' | amTimeAgo }}</span>
+  <div [class]="message.classStyle">
+    {{message.content}}
+    <div class="timeform">
+      <i class="fa fa-clock-o timestamp" aria-hidden="true"></i>
+       <span class="timestamp"> {{ message.timestamp | amLocale: 'es' | amTimeAgo }}</span>
+    </div>
   </div>
 </li>

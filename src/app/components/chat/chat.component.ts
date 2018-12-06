@@ -14,7 +14,8 @@ export class ChatComponent implements OnInit {
   constructor() {
     this.message = new Message('', 'assets/images/user.png');
     this.messages = [
-      new Message('Hola!, soy Luzio, ¿Necesitas ayuda?', 'assets/images/bot.png', new Date(), '#5cb85c')
+      // tslint:disable-next-line:max-line-length
+      new Message('Hola!, soy Luzio, ¿Necesitas ayuda?', 'assets/images/bot.png', new Date(), 'message my-message', 'Luzio', 'message-data')
     ];
   }
 

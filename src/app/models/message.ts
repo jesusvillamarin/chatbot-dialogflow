@@ -2,12 +2,17 @@ export class Message {
   content: string;
   timestamp: Date;
   avatar: string;
-  background: string;
+  classStyle: string;
+  avatarClass: string;
+  name: string;
 
-  constructor(content: string, avatar: string, timestamp?: Date, background?: string) {
+
+  constructor(    content: string, avatar: string, timestamp?: Date, classStyle?: string, name?: string, avatarClass?: string) {
     this.content = content;
     this.timestamp = timestamp;
     this.avatar = avatar;
-    this.background = background;
+    this.classStyle = classStyle;
+    this.name = name;
+    this.avatarClass = avatarClass;
   }
 }
