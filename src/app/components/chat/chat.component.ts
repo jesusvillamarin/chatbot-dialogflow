@@ -1,5 +1,4 @@
-import { Observable } from 'rxjs';
-import { Component, OnInit, Inject, OnDestroy} from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Message } from '../../models';
 import { StoreService } from '../../services/store.service';
 
@@ -16,11 +15,7 @@ export class ChatComponent implements OnInit, OnDestroy {
   constructor(private messagesService: StoreService) {
 
     this.message = new Message('', 'assets/images/user.png');
-    messagesService.getMessage().subscribe(
-      res => {
-        this.messages = res;
-      }
-    );
+    messagesService.getMessage().subscribe(res => this.messages = res);
 
   }
 
